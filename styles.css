@@ -3,13 +3,15 @@
   --bg-start: #dbeafe;
   --bg-mid: #dcfce7;
   --bg-end: #fef3c7;
-  --text: #1f2937;
+  --text: #172033;
   --muted: #5b6472;
   --card: rgba(255, 255, 255, 0.9);
-  --card-border: rgba(255, 255, 255, 0.7);
+  --card-strong: rgba(255, 255, 255, 0.96);
+  --card-border: rgba(255, 255, 255, 0.75);
   --blue: #2563eb;
   --blue-dark: #1d4ed8;
   --green: #16a34a;
+  --orange: #f97316;
   --shadow: rgba(15, 23, 42, 0.18);
 }
 
@@ -27,7 +29,8 @@ html {
     sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 32rem),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.28), transparent 30rem),
     linear-gradient(135deg, var(--bg-start), var(--bg-mid), var(--bg-end));
 }
 
@@ -37,7 +40,7 @@ body {
 }
 
 .page-shell {
-  width: min(920px, 100%);
+  width: min(980px, 100%);
   margin: 0 auto;
   padding: 32px 20px;
 }
@@ -46,7 +49,7 @@ body {
 .content-card {
   background: var(--card);
   border: 1px solid var(--card-border);
-  border-radius: 32px;
+  border-radius: 34px;
   box-shadow: 0 28px 90px var(--shadow);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -57,7 +60,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(28px, 6vw, 64px);
+  padding: clamp(28px, 6vw, 68px);
   text-align: center;
 }
 
@@ -65,16 +68,36 @@ body {
   padding: clamp(24px, 5vw, 56px);
 }
 
-.app-badge {
+.title-logo {
+  display: block;
+  width: min(720px, 100%);
+  height: auto;
+  margin: 0 auto 18px;
+  filter: drop-shadow(0 18px 24px rgba(15, 23, 42, 0.22));
+}
+
+.title-logo.small {
+  width: min(480px, 100%);
+  margin-bottom: 8px;
+}
+
+.eyebrow {
   display: inline-flex;
   align-self: center;
-  margin: 0 auto 18px;
+  margin: 0 auto 20px;
   padding: 8px 16px;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.1);
   color: var(--blue-dark);
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 28px;
 }
 
 h1,
@@ -84,8 +107,8 @@ h2 {
 
 h1 {
   margin: 0 0 18px;
-  font-size: clamp(2.4rem, 8vw, 5rem);
-  letter-spacing: -0.06em;
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  letter-spacing: -0.055em;
 }
 
 h2 {
@@ -105,30 +128,31 @@ li {
   max-width: 720px;
   margin: 0 auto 30px;
   color: var(--muted);
-  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-size: clamp(1.08rem, 2.4vw, 1.3rem);
 }
 
 .updated {
+  text-align: center;
   color: var(--muted);
 }
 
 .support-card {
-  max-width: 620px;
+  max-width: 640px;
   margin: 32px auto;
-  padding: 24px;
-  border-radius: 24px;
-  background: rgba(255, 255, 255, 0.7);
+  padding: 26px;
+  border-radius: 26px;
+  background: var(--card-strong);
   border: 1px solid rgba(37, 99, 235, 0.12);
 }
 
-.support-card h2 {
-  margin-top: 0;
+.support-card h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
 }
 
 .contact-link {
   margin-bottom: 0;
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .link-grid {
@@ -139,22 +163,25 @@ li {
   margin-top: 28px;
 }
 
-.button {
+.button,
+.nav-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 48px;
   padding: 13px 20px;
   border-radius: 999px;
-  font-weight: 800;
+  font-weight: 900;
   text-decoration: none;
   transition:
     transform 0.18s ease,
     box-shadow 0.18s ease,
-    background 0.18s ease;
+    background 0.18s ease,
+    color 0.18s ease;
 }
 
-.button:hover {
+.button:hover,
+.nav-button:hover {
   transform: translateY(-2px);
 }
 
@@ -168,14 +195,21 @@ li {
   background: var(--blue-dark);
 }
 
-.button.secondary {
+.button.secondary,
+.nav-button {
   color: var(--blue-dark);
   background: rgba(37, 99, 235, 0.1);
 }
 
+.button.secondary:hover,
+.nav-button:hover {
+  background: rgba(22, 163, 74, 0.12);
+  color: var(--green);
+}
+
 a {
   color: var(--blue-dark);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 a:hover {
@@ -183,11 +217,7 @@ a:hover {
 }
 
 .top-nav {
-  margin-bottom: 28px;
-}
-
-.top-nav a {
-  text-decoration: none;
+  margin-bottom: 24px;
 }
 
 section {
@@ -228,6 +258,14 @@ footer p {
 
   .hero-card {
     min-height: calc(100vh - 36px);
+  }
+
+  .title-logo {
+    width: 100%;
+  }
+
+  .title-logo.small {
+    width: 100%;
   }
 
   .link-grid {
