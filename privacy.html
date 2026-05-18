@@ -31,7 +31,7 @@
         <h1>Privacy Policy</h1>
 
         <p class="updated">
-          <strong>Last updated:</strong> 14 May 2026
+          <strong>Last updated:</strong> 18 May 2026
         </p>
 
         <p class="intro">
@@ -44,10 +44,10 @@
       <section>
         <h2>The short version</h2>
         <ul>
-          <li>We do not have any servers. We do not collect or receive any of your data.</li>
+          <li>We do not have any servers. We, the developer, never see or receive any of your data.</li>
           <li>Everything your child records — rides, photos, badges and nicknames — is stored on your device and, optionally, in your own private iCloud.</li>
           <li>There are no accounts, no advertisements, no analytics SDKs and no third-party trackers.</li>
-          <li>The only network traffic the app initiates is to Apple’s iCloud, for your own sync, and Apple Maps, for map tiles.</li>
+          <li>The only network requests the app makes are to Apple’s own services: Apple iCloud for your private sync, Apple Maps for map tiles, and Apple WeatherKit for the local weather.</li>
         </ul>
       </section>
 
@@ -61,9 +61,10 @@
           <li>A nickname you choose for your child.</li>
           <li>Their date of birth and interests, if entered, used only to make the app feel personal.</li>
           <li>An optional bike photo and avatar.</li>
-          <li>Each ride’s GPS trail, distance, time and any photos or diary notes attached.</li>
+          <li>Each ride’s GPS trail, distance, time, and any photos or diary notes attached.</li>
+          <li>A small weather snapshot taken at the start of each ride (condition icon, temperature and a friendly phrase) so the memory of what the weather was like stays with the ride.</li>
           <li>Badges earned and custom badges invented.</li>
-          <li>Your settings, including units, theme, sound and haptic preferences.</li>
+          <li>Your settings, including units, theme, sound and haptic preferences, and the optional grown-up PIN (stored in the iOS Keychain on this device — never synced).</li>
         </ul>
 
         <p>
@@ -75,18 +76,50 @@
       <section>
         <h2>Location</h2>
         <p>
-          The app uses your device’s location only while a ride is being recorded, and only with
-          <strong>“When In Use”</strong> permission. Location is used to draw your trail on Apple Maps
-          and to calculate distance and speed. Location data is never sent to us or to any third party.
+          Pedal Quest asks for the <strong>“While Using App”</strong> location permission only.
+          We do not request “Always” location.
+        </p>
+
+        <p>
+          During an <strong>active ride</strong>, location is used to draw your trail on Apple Maps, calculate distance and speed, and show your route on the map. Location updates continue while the screen is locked so the app can keep recording when the phone is in a backpack or pocket. iOS shows a small blue indicator in the status bar while that’s happening, and tracking stops as soon as the ride ends.
+        </p>
+
+        <p>
+          Location is also used <strong>briefly</strong>, in the foreground, when the home screen or a paused ride shows the local weather — see the Weather section below.
+        </p>
+
+        <p>
+          The trail is recorded as a series of small GPS points that stay on your iPhone and, if you’re signed in to iCloud, in your own private iCloud. Location data is never sent to us or to any third party.
+        </p>
+      </section>
+
+      <section>
+        <h2>Weather</h2>
+        <p>
+          When the home screen, paused tracker, ride summary or ride detail screen shows the local weather, Pedal Quest sends your current location to <strong>Apple’s WeatherKit service</strong> to fetch the forecast.
+        </p>
+
+        <p>
+          The request goes only to Apple — never to us, never to any third party. Apple’s privacy promise covers what they do with the request, and your location is not used by Apple for advertising or profiling.
+        </p>
+
+        <p>
+          The weather snapshot taken at the start of each ride (a condition icon, the temperature, and a friendly phrase) is kept with the ride in your own iCloud, so revisiting an old ride still shows the same memory.
         </p>
       </section>
 
       <section>
         <h2>Camera and photos</h2>
         <p>
-          Camera and photo access is optional. It is used only if you choose to set an avatar photo,
-          set a bike photo, or attach photos to a ride. Photos are stored alongside the ride in your own iCloud.
-          EXIF metadata, including any location embedded in the photo, is stripped before storage.
+          Camera and photo access is optional. The camera is used only if you choose to take an avatar photo, take a photo of your bike, or take a photo during a ride. Photo-library access is used only if you choose to pick an existing photo for your avatar or bike.
+        </p>
+
+        <p>
+          Photos taken in the app are stored alongside the ride or profile in your own iCloud. EXIF metadata, including any location embedded in the photo, is stripped before storage.
+        </p>
+
+        <p>
+          A grown-up can also turn on an optional “Save ride photos to your Photos app” setting. When that’s on, Pedal Quest asks iOS for <em>write-only</em> photo-library access — we never read existing photos, only add ride photos you’ve already taken inside the app. When the setting is off, photos stay inside Pedal Quest.
         </p>
       </section>
 
@@ -123,6 +156,15 @@
       </section>
 
       <section>
+        <h2>What the child can type</h2>
+        <p>
+          Nicknames, ride titles, diary notes, companion names and custom badge names are run through a
+          local, on-device word filter to help block obviously inappropriate words before they are saved.
+          The filter is built into the app itself — nothing your child types is sent anywhere to be checked.
+        </p>
+      </section>
+
+      <section>
         <h2>iCloud</h2>
         <p>
           Pedal Quest uses your own iCloud Drive private database via SwiftData to sync rides between your devices.
@@ -143,6 +185,8 @@
         <h2>Third parties</h2>
         <p>
           We do not use any third-party SDKs, analytics tools, advertising networks or social-login providers.
+          The only network requests the app makes are to Apple’s own services (iCloud, Apple Maps, WeatherKit),
+          all under your existing relationship with Apple.
         </p>
       </section>
 
