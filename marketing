@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pedal Quest — a private cycling adventure log for children aged 7 to 13." />
+
+  <title>Pedal Quest — A private cycling adventure log for kids</title>
+
+  <link rel="stylesheet" href="/pedalquest-support/styles.css" />
+</head>
+
+<body>
+  <main class="page-shell">
+    <article class="content-card">
+      <header class="policy-header">
+        <img
+          class="title-logo"
+          src="/pedalquest-support/PQTitle.png"
+          alt="Pedal Quest"
+        />
+
+        <p class="eyebrow">For grandads, parents and kids</p>
+
+        <h1>A warm cycling adventure log for children aged 7 to 13</h1>
+
+        <p class="intro">
+          Pedal Quest turns every bike ride into a memory worth keeping. A route drawn on Apple Maps, the distance and time, a friendly diary entry, and encouraging badges for the miles and milestones along the way. No accounts, no leaderboards, no adverts — and your rides stay yours.
+        </p>
+      </header>
+
+      <section>
+        <h2>What your child can do</h2>
+        <p>
+          Start a ride with one tap. Watch the trail draw on Apple Maps as they pedal. Take a photo along the way with the floating camera button. Save the ride with a friendly diary entry — who they rode with, how it felt, what was muddy. Earn warm, encouraging badges for every milestone, and invent their own. See the local weather right on the home screen, with playful forecasts that warn about puddles, suggest a raincoat, or remind them to bring a water bottle. Visit a personal Hall of Fame whenever they want to look back on every adventure so far.
+        </p>
+      </section>
+
+      <section>
+        <h2>Made for riding together</h2>
+        <p>
+          Pedal Quest was designed around a child going on bike rides with a grandparent or parent — the kind of small, regular adventures that turn into proper memories. The diary asks who they rode with. The badges celebrate the company. The optional ride-buddy pairing lets two phones share trail and badges side by side, over Bluetooth and Wi-Fi alone, with no internet involved.
+        </p>
+      </section>
+
+      <section>
+        <h2>Privacy at the heart of it</h2>
+        <p>
+          Everything your child records — rides, photos, badges, nicknames — lives on your iPhone and, if you choose, in your own private iCloud. There is no Pedal Quest server. No third-party trackers. No analytics SDK. No advertising. The developer has no way to see your child's data, and the app never asks them to create an account or share anything publicly. The only network requests the app makes are to Apple's own services: iCloud for your private sync, Apple Maps for map tiles, and Apple WeatherKit for the local weather — and the weather feature can be turned off entirely.
+        </p>
+      </section>
+
+      <section>
+        <h2>An adventure log, not a fitness app</h2>
+        <p>
+          You won't find VO2 max, segment leaderboards, training load or athletic comparisons here. Pedal Quest celebrates effort over performance. The badges are encouraging rather than competitive, the language is warm rather than competitive, and the only person each child is measured against is the one they were yesterday.
+        </p>
+      </section>
+
+      <section>
+        <h2>Built carefully for grown-ups</h2>
+        <p>
+          A clear "Grown-up only" area gives parents the controls that matter: an optional 4-digit PIN with Face ID, a hold-to-confirm gesture on destructive actions, a toggle to switch off ride-buddy pairing or weather, and a live Permissions hub that shows exactly what the app is allowed to access. Photos can be set to stay inside Pedal Quest, save manually, or auto-save to your Photos app — your call.
+        </p>
+      </section>
+
+      <section>
+        <h2>Accessible by design</h2>
+        <p>
+          Pedal Quest is built natively for iOS with full support for Dark Mode, Dynamic Type (including the AX accessibility sizes), Reduced Motion, Differentiate Without Color, Sufficient Contrast and VoiceOver. Every animation that loops respects Reduce Motion. Every status indicator that uses colour also carries an icon or text label.
+        </p>
+      </section>
+
+      <section>
+        <h2>Download</h2>
+        <p>
+          Pedal Quest is available on the App Store for iPhone running iOS 26 or later.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          For support, feedback or any privacy questions, please email:
+          <a href="mailto:marc@iamcoding.uk">marc@iamcoding.uk</a>
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          <a class="nav-button" href="/pedalquest-support/">Support</a>
+          <a class="nav-button" href="/pedalquest-support/privacy.html">Privacy Policy</a>
+        </p>
+
+        <p>
+          © 2026 Pedal Quest. All rights reserved.
+        </p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
